@@ -1,6 +1,15 @@
 package ch12_genericsEnumerationAnnotion;
 
 public class EnumEx1 {
+
+    private enum Direction {
+        EAST,
+        SOUTH,
+        WEST,
+        NORTH
+    }
+
+
     public static void main(String[] args) {
         Direction d1 = Direction.EAST;
         Direction d2 = Direction.valueOf("WEST");
