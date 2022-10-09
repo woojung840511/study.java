@@ -1,6 +1,5 @@
 package ch13_thread;
 
-import com.sun.org.apache.xml.internal.resolver.readers.TextCatalogReader;
 import java.util.Iterator;
 import java.util.Map;
 
