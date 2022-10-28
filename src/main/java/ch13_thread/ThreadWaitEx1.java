@@ -5,11 +5,11 @@ import java.util.ArrayList;
 public class ThreadWaitEx1 {
 
     public static void main(String[] args) throws InterruptedException {
-        Table table = new Table(); // 여러 쓰레드가 공유하는 객체
+        Table1 table = new Table1(); // 여러 쓰레드가 공유하는 객체
 
-        new Thread(new Cook(table), "COOK1").start();
-        new Thread(new Customer(table, "donut")).start();
-        new Thread(new Customer(table, "burger")).start();
+        new Thread(new Cook1(table), "COOK1").start();
+        new Thread(new Customer1(table, "donut")).start();
+        new Thread(new Customer1(table, "burger")).start();
 
         Thread.sleep(1000); //강제 종료시킨다.
         System.exit(0); // 프로그램 전체를 종료. (모든 쓰레드가 종료됨.)
@@ -27,12 +27,12 @@ public class ThreadWaitEx1 {
     }
 }
 
-class Customer implements Runnable {
+class Customer1 implements Runnable {
 
-    private Table table;
+    private Table1 table;
     private String food;
 
-    public Customer(Table table, String food) {
+    public Customer1(Table1 table, String food) {
         this.table = table;
         this.food = food;
     }
@@ -58,11 +58,11 @@ class Customer implements Runnable {
     }
 }
 
-class Cook implements Runnable {
+class Cook1 implements Runnable {
 
-    private Table table;
+    private Table1 table;
 
-    public Cook(Table table) {
+    public Cook1(Table1 table) {
         this.table = table;
     }
 
@@ -80,7 +80,7 @@ class Cook implements Runnable {
     }
 }
 
-class Table {
+class Table1 {
 
     String[] dishNames = {"donut", "donut", "burger"}; // donut이 더 자주 나온다.
     final int MAX_FOOD = 6; // 테이블에 놓을 수 있는 최대 음식의 개수
