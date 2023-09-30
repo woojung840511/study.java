@@ -10,17 +10,17 @@ import java.util.Scanner;
 public class Main {
 
     public String solution(String str) {
-        StringBuilder answer = new StringBuilder();
+        String answer = "";
         for (char c : str.toCharArray()) {
-            answer.append(Character.isLowerCase(c) ?
+            answer += (Character.isLowerCase(c) ?
                     Character.toUpperCase(c)
                     : Character.toLowerCase(c));
         }
-        return answer.toString();
+        return answer;
     }
     public static void main (String[] args)  {
         Scanner sc = new Scanner(System.in);
         String str = sc.next();
-        System.out.println("result: " + new Main().solution(str));
+        System.out.println(new Main().solution(str));
     }
 }
