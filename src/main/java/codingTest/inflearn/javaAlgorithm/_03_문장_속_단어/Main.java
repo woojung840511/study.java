@@ -11,19 +11,41 @@ import java.util.Scanner;
  */
 public class Main {
 
-    public String solution(String str) {
+    // 강사님 풀이
+    /*public String solution(String str) {
         String answer = "";
-        int begin = 0;
-        int max = str.length();
+        int max = Integer.MIN_VALUE, pos;
 
-        while(begin < max) {
-            int end = str.indexOf(" ", begin);
-            String part = end == -1 ? str.substring(begin) : str.substring(begin, end);
+        while ((pos = str.indexOf(" ")) != -1) {
+            String temp = str.substring(0, pos);
+            int tempLength = temp.length();
+            if (tempLength > max) {
+                answer = temp;
+                max = tempLength;
+            }
+            str = str.substring(pos + 1);
+        }
+        if (str.length() > answer.length()) answer = str;
 
-            if (answer.length() < part.length()) answer = part;
+        return answer;
+    }*/
 
-            boolean hasSpace = end != -1;
-            begin += (part.length() + (hasSpace ? 1 : 0));
+    // 내 풀이
+    public String solution(String str) {
+        String split = " ";
+        String answer = "";
+        int benginIndex = 0;
+        int length = str.length();
+
+        while(benginIndex < length) {
+            int spanceIndex = str.indexOf(split, benginIndex);
+            String word = spanceIndex == -1 ? str.substring(benginIndex) : str.substring(benginIndex, spanceIndex);
+
+            if (answer.length() < word.length()) answer = word;
+
+//            boolean isLastWord = spanceIndex == -1;
+//            benginIndex += (word.length() + (isLastWord ? 0 : 1));
+            benginIndex += (word.length() + split.length());
         }
 
         return answer;
