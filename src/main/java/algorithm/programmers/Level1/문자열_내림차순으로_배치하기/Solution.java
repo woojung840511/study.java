@@ -1,6 +1,7 @@
-package algorithm.programmers.Level1;
+package algorithm.programmers.Level1.문자열_내림차순으로_배치하기;
 
-public class 문자열_내림차순으로_배치하기 {
+public class Solution {
+
     public String solution(String s) {
         char[] chars = s.toCharArray();
 
@@ -21,6 +22,6 @@ public class 문자열_내림차순으로_배치하기 {
 
     public static void main(String[] args) {
 
-        new 문자열_내림차순으로_배치하기().solution("Zbcdefg");
+        new Solution().solution("Zbcdefg");
     }
 }
