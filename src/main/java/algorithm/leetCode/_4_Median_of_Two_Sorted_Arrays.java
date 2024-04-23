@@ -4,13 +4,6 @@ import java.util.Arrays;
 
 public class _4_Median_of_Two_Sorted_Arrays {
 
-    public static void main(String[] args) {
-        int[] nums1 = {1,3};
-        int[] nums2 = {2};
-        new _4_Median_of_Two_Sorted_Arrays().findMedianSortedArrays(
-            nums1, nums2
-        );
-    }
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
 
         int[] mergedArray = new int[nums1.length + nums2.length];
