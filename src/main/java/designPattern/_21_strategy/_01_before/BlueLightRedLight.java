@@ -1,7 +1,5 @@
 package designPattern._21_strategy._01_before;
 
-import org.springframework.boot.autoconfigure.web.servlet.JspTemplateAvailabilityProvider;
-
 public class BlueLightRedLight {
 
     private int speed;

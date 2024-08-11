@@ -1,8 +1,17 @@
 package algorithm.leetCode;
 
 import java.util.Arrays;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class _4_Median_of_Two_Sorted_Arrays {
+
+    public static void main(String[] args) {
+        String str = "보장보험료(290,000원) 은 오소리 고양이 뚜뚜 보장보험료 [2200]원";
+        Matcher matcher = Pattern.compile("보장보험료.*?원").matcher(str);
+
+        System.out.println(matcher.group());
+    }
 
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
 
