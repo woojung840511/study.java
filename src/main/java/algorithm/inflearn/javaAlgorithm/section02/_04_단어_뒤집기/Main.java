@@ -1,4 +1,4 @@
-package algorithm.inflearn.javaAlgorithm._04_단어_뒤집기;
+package algorithm.inflearn.javaAlgorithm.section02._04_단어_뒤집기;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package algorithm.inflearn.javaAlgorithm._03_문장_속_단어;
+package algorithm.inflearn.javaAlgorithm.section02._03_문장_속_단어;
 
 public class Test {
 

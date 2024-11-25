@@ -1,4 +1,4 @@
-package algorithm.inflearn.javaAlgorithm._05_특정_문자_뒤집기;
+package algorithm.inflearn.javaAlgorithm.section02._05_특정_문자_뒤집기;
 
 import java.util.Scanner;
 
